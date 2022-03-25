@@ -2,7 +2,6 @@
   "name": "es1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://donaking-0.github.io/react-crypto/",
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
