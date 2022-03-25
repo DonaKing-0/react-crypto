@@ -24,10 +24,10 @@ const getCoinDetail= async (id)=>{
 
 const getCoinChart= async (id)=>{
     try{
-        const params ={
+        /*const params ={
             cs_currency: 'usd',
             days: 30
-        }
+        }*/
         const {data: coinDetail}= await axios.get(/*`/coins/${id}`*/ '/coins/'+ id+ '/market_chart?vs_currency=usd&days=30');//oppure  + {params} ma non va?!
         console.log({coinDetail});
         return coinDetail;

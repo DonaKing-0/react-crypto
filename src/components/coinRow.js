@@ -1,5 +1,5 @@
 import { /*useEffect, useMemo,*/ useState } from 'react';
-import  {getCoinChart, getCoinList}  from '../api/index.js';
+import  {getCoinChart/*, getCoinList*/}  from '../api/index.js';
 //import  {getCoinDetail}  from '../api/index.js';
 import Chart from 'react-apexcharts';
 import { Button, CircularProgress } from '@mui/material';
@@ -34,7 +34,7 @@ function CoinRow({coin}) {
   }
 
   const clickGrafico= async (coin)=>{
-    if(mostragrafico==true){
+    if(mostragrafico===true){
       setMostragrafico(false);
     }else{
       setMostragrafico(true);      
