@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import  {getCoinList}  from '../api/index.js';
 import CoinRow from './CoinRow.js';
 
-function CoinList({}) {
+function CoinList() {
 
   const [coins, setCoins]= useState([]);
   const [search, setSearch]= useState('');
