@@ -1,7 +1,6 @@
-import { TextField } from '@mui/material';
 import { useEffect, useMemo, useState } from 'react';
 import  {getCoinList}  from '../api/index.js';
-import CoinRow from './CoinRow.js';
+import  {getCoinDetail}  from '../api/index.js';
 
 function CoinList({}) {
 
@@ -53,16 +52,17 @@ filteredCoins.filter((coin)=>{
 });                     in teoria funziona anche questo
 console.log('ciao'+filteredCoins)*/
 
+const onClickRow= async (coin)=>{
+  console.log({selectedCoin: coin});
+  const coinDetail= await getCoinDetail(coin.id);
+  console.log(coinDetail);
+}
+
   return (
     <div style={{ width: '90%' }}>
     <div className='coin-list'>
-      {/* 
+
       <input placeholder='cerca' onChange={onTextChange} style={{ margin: '10px' }}></input>
-      text field da libreria  
-      */}
-      <TextField id="outlined-search" label="Search" type="search" margin="normal" 
-        style={{backgroundColor: 'yellowgreen'}}
-        onChange={onTextChange} />
       <br></br>
       <table className="table table-sm table-striped table-hover table-bordered table-dark">
       <tbody>
@@ -70,7 +70,22 @@ console.log('ciao'+filteredCoins)*/
         {
             filteredCoins.map(coin =>{
               return(
-                  <CoinRow coin={coin} key={coin.id}/>
+                  <tr  key={coin.id} onClick={()=> onClickRow(coin)}>
+                    <td>
+                      <img
+                      src={coin.image.small}
+                      alt=""
+                      style={{width: '40px', height: '40px'}}
+                      className="rounded-circle App-logo"
+                      />
+                    </td>
+                    <td>
+                      {coin.name}
+                    </td>
+                    <td>
+                      {coin.symbol}
+                    </td>
+                  </tr> 
               )
             })
         }

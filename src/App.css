@@ -36,20 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.coin-list {
-  min-width: 50%;
-}
-.coin-row {
-  display: flex;
-  margin-top: 0.5rem;
-  flex-direction: column;
-}
-.coin-row-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
