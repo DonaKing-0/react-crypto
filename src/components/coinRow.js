@@ -122,7 +122,6 @@ function CoinRow({coin}) {
     
   ]);
 }
-
 //xke open && <altro>
 
 export default CoinRow;
