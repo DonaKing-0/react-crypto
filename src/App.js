@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import CoinList from './/components/CoinList.js';
+import CoinList from './components/CoinList.js';
 
 function App() {
 

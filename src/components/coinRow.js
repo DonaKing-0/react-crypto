@@ -65,13 +65,21 @@ function CoinRow({coin}) {
       setCaricagrafico(true);
     }
   }
-
+//commenti tutti in fondo altrimenti crea problemi
+/*
+{/* commento  
+            {open && <p>
+            {coin.market_data.circulating_supply} pezzi
+            </p>}
+            *//*}
+      {/* se aggiungo una sola riga --> tutte stesso colore*//*}
+ {/* non sapevo cosa altro mettere come key *//*}
+*/
   return ([
     <tr key={coin.id} onClick={()=> onClickRow(coin)}
         onMouseEnter={()=> {setOpen(true)}}
         onMouseLeave={()=> {setOpen(false)}}  
     >
-      
         <td>
             <img
             src={coin.image.small}
@@ -82,20 +90,15 @@ function CoinRow({coin}) {
         </td>
         <td>
             {coin.name}
-            {/* commento  
-            {open && <p>
-            {coin.market_data.circulating_supply} pezzi
-            </p>}
-            */}
+            
         </td>
         <td>
             {coin.symbol}
         </td>
-                          {/* se aggiungo una sola riga --> tutte stesso colore*/}
     </tr>,
     <tr key={coin.id+1}
     onMouseEnter={()=> {setOpen(true)}}
-    onMouseLeave={()=> {setOpen(false)}}>  {/* non sapevo cosa altro mettere*/}
+    onMouseLeave={()=> {setOpen(false)}}> 
       {open && <td colSpan={3}>
       {coin.market_data.circulating_supply} pezzi
       </td>}
@@ -112,9 +115,6 @@ function CoinRow({coin}) {
     <tr key={coin.id+3}
     onMouseEnter={()=> {setOpen(true)}}
     onMouseLeave={()=> {setOpen(false)}}>
-
-      
-
       {open && caricagrafico && <td colSpan={3}>
       <Chart options={chartSet.options} series={chartSet.series} type='line' height={300} />
       </td>}
