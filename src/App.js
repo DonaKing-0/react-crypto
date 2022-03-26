@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import CoinList from './components/CoinList.js';
+import CoinList from './components/CoinList';
 
 function App() {
 
@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <CoinList />
       </header>
     </div>
   );

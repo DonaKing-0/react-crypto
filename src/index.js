@@ -4,12 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ".//api/axios";
-import CoinList from "./components/CoinList.js";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <CoinList />
   </React.StrictMode>,
   document.getElementById('root')
 );
