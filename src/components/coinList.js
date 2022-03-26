@@ -1,7 +1,7 @@
 import { TextField } from '@mui/material';
 import { useEffect, useMemo, useState } from 'react';
 import  {getCoinList}  from '../api/index.js';
-import CoinRow from './CoinRow.js';
+import CoinRow from './coinRow.js';
 
 function CoinList() {
 
